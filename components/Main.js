@@ -6,15 +6,18 @@ import React, {
 import Emitter from '../src/Emitter'
 import styles from './Styles';
 import SearchView from './SearchView'
-import ResultsView from './ResultView'
+import ResultsView from './ResultsView'
 
 class Main extends Component {
   constructor(props) {
     super(props);
   }
 
-  searchSubmit(value) {
-    Emitter.emit('search', value)
+  searchSubmit(query) {
+    console.log(query)
+    Emitter.emit('newSearch');
+    if(query.value)
+      Emitter.emit('search', query);
   }
 
   render() {

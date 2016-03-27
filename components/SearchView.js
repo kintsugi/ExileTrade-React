@@ -22,22 +22,23 @@ class SearchView extends Component {
 
   onPress() {
     this.props.submitHandler(this.state)
-    this.setState({value:null})
   }
 
   render() {
     return(
       <View style = {styles.searchContainer}>
-        <TextInput 
+        <TextInput
           style = {styles.searchInput}
           onChangeText = {(value) => this.setState({value})}
           value = {this.state.value}
-          placeholder = "Search..."
+          placeholder = "Search ExileTrade..."
           placeholderTextColor = "#adadad"
         />
         <View style = {{paddingLeft: 10}}>
           <TouchableHighlight style = {styles.searchButton} onPress={this.onPress}>
-              <Image source = {require('../imgs/search.png')}/>
+              <Image
+                source = {require('../imgs/search.png')}
+                style = {{width: 36, height: 36}}/>
           </TouchableHighlight>
         </View>
       </View>

@@ -6,7 +6,13 @@ const styles = React.StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     alignItems: 'center',
-    backgroundColor: '#3c3f41'
+    backgroundColor: '#3c3f41',
+    paddingBottom: 10
+  },
+  text: {
+    fontFamily: 'Arial',
+    color: '#adadad',
+    textAlign: 'left'
   },
   searchContainer: {
     paddingTop: 30,
@@ -37,11 +43,51 @@ const styles = React.StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     width: 372,
-    alignItems: 'center',
+    alignItems: 'flex-start',
     borderColor: '#000000',
     backgroundColor: '#303030',
     borderRadius: 10,
     borderWidth: 1,
+  },
+  resultItemTextContainer: {
+    flex: 1,
+    backgroundColor: '#000000',
+    width: 352,
+    padding: 10
+  },
+  resultItemContainer: {
+    flexDirection: 'column',
+    flex: 1,
+    borderWidth: 1,
+    borderColor: '#000000',
+  },
+  uniqueNameText: {
+    fontFamily: 'Arial',
+    color: '#AF6025',
+    textAlign: 'left',
+  },
+  modText: {
+    fontFamily: 'Arial',
+    color: '#adadad',
+    textAlign: 'left',
+    fontSize: 10 
+  },
+  modTextContainer: {
+    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+  },
+  flavourText: {
+    fontFamily: 'Arial',
+    color: '#22B14C',
+    textAlign: 'left',
+    fontStyle: 'italic'
+  },
+  flavourTextContainer: {
+    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    padding: 10
   }
 });
 
