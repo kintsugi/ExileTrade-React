@@ -15,6 +15,7 @@ class Main extends Component {
 
   searchSubmit(query) {
     console.log(query)
+    //clear on new search
     Emitter.emit('newSearch');
     if(query.value)
       Emitter.emit('search', query);

@@ -9,19 +9,20 @@ import React, {
 
 import styles from './Styles';
 
+/*
+ * Search bar, submit entered text when button is pressed to the passed
+ * handler to make the query to the ExileTools API.
+ */
+
 class SearchView extends Component {
   constructor(props) {
     super(props);
-    this.onPress = this.onPress.bind(this)
-    this.state = {value: null}
-  }
-
-  componentWillMount() {
-
+    this.onPress = this.onPress.bind(this);
+    this.state = {value: null};
   }
 
   onPress() {
-    this.props.submitHandler(this.state)
+    this.props.submitHandler(this.state);
   }
 
   render() {

@@ -8,6 +8,11 @@ import Emitter from '../src/Emitter'
 import ExileTools from '../src/ExileTools.js'
 import ResultsListView from './ResultsListView'
 
+/*
+ * Contains all results related material, accepts the results from
+ * the API.
+ */
+
 class ResultsView extends Component {
   constructor(props) {
     super(props);
@@ -25,11 +30,9 @@ class ResultsView extends Component {
       })
     });
     Emitter.addListener('search', (query) => {
-      console.log('calling query')
       ExileTools.query(query)
     });
     Emitter.addListener('results', (results) => {
-      console.log('displaying results')
       this.setState({
         showResults: true,
         results: results
@@ -43,7 +46,6 @@ class ResultsView extends Component {
     );
   }
   renderResults() {
-    console.log('rendering results')
     return(
       <View style = {styles.resultsContainer}>
         <ResultsListView results = {this.state.results}/>
@@ -53,8 +55,6 @@ class ResultsView extends Component {
   }
 
   render() {
-    console.log('rendering')
-    console.log(this.state.showResults)
     if(this.state.showResults)
       return this.renderResults();
     else

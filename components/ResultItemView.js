@@ -8,6 +8,10 @@ import React, {
 import styles from './Styles';
 import ResultItemInfoView from './ResultItemInfoView'
 
+/*
+ * Container for a single instance of a result
+ */
+
 class ResultItemView extends Component {
   constructor(props) {
     super(props);
@@ -25,17 +29,25 @@ class ResultItemView extends Component {
               Seller: {this.props.data._source.shop.lastCharacterName}
             </Text>
           </View>
-          <View style = {{ flexDirection: 'row', padding: 10}}>
+          <View style = {{padding: 10, flexDirection: 'row', alignItems: 'center'}}>
             <Image
             source = {{uri: this.props.data._source.info.icon}}
             style = {{width: 64, height: 64}}
             />
-            <ResultItemInfoView source = {this.props.data._source}/>
+            <View style = {{paddingLeft: 10}}>
+              <Text style = {styles.modText}>
+                {this.props.data._source.shop.note || 'No Price Set'}{'\n'}
+                Verified: {this.props.data._source.shop.verified}{'\n'}
+              </Text>
+            </View>
           </View>
           <View style = {styles.flavourTextContainer}>
-            <Text style = {styles.flavourText}>
-            {!this.props.data._source.info.flavourText ? '' : '\'' + this.props.data._source.info.flavourText + '\''}
-            </Text>
+            <ResultItemInfoView source = {this.props.data._source}/>
+            <View style = {{paddingTop: 5}}>
+              <Text style = {styles.flavourText}>
+              {!this.props.data._source.info.flavourText ? '' : '\'' + this.props.data._source.info.flavourText + '\''}
+              </Text>
+            </View>
           </View>
 
         </View>

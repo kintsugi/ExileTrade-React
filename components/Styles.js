@@ -48,12 +48,13 @@ const styles = React.StyleSheet.create({
     backgroundColor: '#303030',
     borderRadius: 10,
     borderWidth: 1,
+    flexWrap: 'wrap',
   },
   resultItemTextContainer: {
     flex: 1,
     backgroundColor: '#000000',
     width: 352,
-    padding: 10
+    padding: 10,
   },
   resultItemContainer: {
     flexDirection: 'column',
@@ -70,12 +71,13 @@ const styles = React.StyleSheet.create({
     fontFamily: 'Arial',
     color: '#adadad',
     textAlign: 'left',
-    fontSize: 10 
+    fontSize: 10, 
   },
   modTextContainer: {
     flex: 1,
-    flexDirection: 'column',
     alignItems: 'flex-start',
+    flexDirection: 'column',
+    flexWrap: 'wrap',
   },
   flavourText: {
     fontFamily: 'Arial',
@@ -87,6 +89,7 @@ const styles = React.StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     alignItems: 'flex-start',
+    flexWrap: 'wrap',
     padding: 10
   }
 });
