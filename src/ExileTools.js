@@ -1,5 +1,10 @@
 import Emitter from './Emitter'
 
+/*
+ * Wrapper class to query ExileTools API
+ * NOTE: Authorization field in ExileTools.options.headers is a test value,
+ * replace with an authorized key if app goes to production.
+ */
 
 class ExileTools {
   constructor(props) {
@@ -11,6 +16,7 @@ class ExileTools {
     }
   }
 
+  //See ExileTool API ref for query parameter structure.
   query(query) {
     var url = this.options.baseUrl;
     fetch(url, {
