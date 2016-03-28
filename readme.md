@@ -11,4 +11,6 @@ ExileTrade-React is an app written in react-native used to make simple queries t
 
 1. Ensure that you have react-native and xcode installed. 
 2. Clone the repo and install dependencies ```git clone https://github.com/terminull/ExileTrade-React.git && cd ExileTrade-React/ && npm install```
-3. `open ios/ExileTrade_React.xcodeproj` and run the project in the simulator.
+3. `open ios/ExileTrade_React.xcodeproj` and run the project in the simulator or `react-native run-ios`
+
+Note: This prototype was intended to be ran on the iPhone 6 Plus.
