@@ -4,7 +4,6 @@ import React, {
 } from 'react-native'
 
 import Emitter from '../src/Emitter'
-import styles from './Styles';
 import SearchView from './SearchView'
 import ResultsView from './ResultsView'
 
@@ -31,5 +30,15 @@ class Main extends Component {
     );
   }
 }
+
+const styles = React.StyleSheet.create({
+mainContainer: {
+    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'center',
+    backgroundColor: '#3c3f41',
+    paddingBottom: 10
+  },
+});
 
 module.exports = Main;

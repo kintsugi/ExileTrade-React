@@ -7,8 +7,6 @@ import React, {
   TouchableHighlight,
 } from 'react-native'
 
-import styles from './Styles';
-
 /*
  * Search bar, submit entered text when button is pressed to the passed
  * handler to make the query to the ExileTools API.
@@ -46,5 +44,23 @@ class SearchView extends Component {
     );
   }
 }
+
+const styles = React.StyleSheet.create({
+  searchContainer: {
+    paddingTop: 30,
+    flexDirection: 'row',
+  },
+  searchInput: {
+    paddingLeft: 10,
+    backgroundColor: '#303030',
+    borderColor: '#000000',
+    borderWidth: 1,
+    borderRadius: 10,
+    height: 42,
+    width: 320,
+    fontFamily: 'Arial',
+    color: '#adadad',
+  },
+});
 
 module.exports = SearchView;

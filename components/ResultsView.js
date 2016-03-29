@@ -3,7 +3,6 @@ import React, {
   View
 } from 'react-native'
 
-import styles from './Styles';
 import Emitter from '../src/Emitter'
 import ExileTools from '../src/ExileTools.js'
 import ResultsListView from './ResultsListView'
@@ -63,5 +62,19 @@ class ResultsView extends Component {
 
   }
 }
+
+const styles = React.StyleSheet.create({
+  resultsContainer: {
+    flex: 1,
+    flexDirection: 'column',
+    width: 372,
+    alignItems: 'flex-start',
+    borderColor: '#000000',
+    backgroundColor: '#303030',
+    borderRadius: 10,
+    borderWidth: 1,
+    flexWrap: 'wrap',
+  },
+});
 
 module.exports = ResultsView;

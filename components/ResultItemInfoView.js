@@ -5,8 +5,8 @@ import React, {
   Text
 } from 'react-native'
 
-import styles from './Styles';
-import ItemModsListView from './ItemModsListView.js'
+import GlobalStyles from './GlobalStyles';
+import ItemModsListView from './ItemModsListView'
 
 /*
  * Parent view of ItemModsListView. Contains area for other extraneous item
@@ -20,7 +20,7 @@ class ResultItemInfoView extends Component {
 
   render() {
     return(
-        <View style = {{flex: 1, flexDirection: 'column', alignItems: 'flex-start', flexWrap: 'wrap'}}>
+        <View style = {styles.ItemModsListContainer}>
           <ItemModsListView mods = {this.props.source.mods}/>
           <Text style = {styles.modText}>
           {this.props.source.sockets ? '\nSockets: ' + this.props.source.sockets.allSocketsGGG : ''}
@@ -29,5 +29,14 @@ class ResultItemInfoView extends Component {
     );
   }
 }
+
+const styles = React.StyleSheet.create({
+  ItemModsListContainer: {
+    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    flexWrap: 'wrap'
+  }
+});
 
 module.exports = ResultItemInfoView;

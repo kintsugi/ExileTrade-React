@@ -5,7 +5,7 @@ import React, {
   Text
 } from 'react-native'
 
-import styles from './Styles';
+import GlobalStyles from './GlobalStyles';
 
 /*
  * View for the implicit and explicit mods of an item
@@ -45,10 +45,19 @@ class ItemModsListView extends Component {
   render() {
     return(
       <View style = {styles.modTextContainer}>
-        <Text style = {styles.modText}>{this.state.modsString}</Text>
+        <Text style = {GlobalStyles.modText}>{this.state.modsString}</Text>
       </View>
     );
   }
 }
+
+const styles = React.StyleSheet.create({
+  modTextContainer: {
+    flex: 1,
+    alignItems: 'flex-start',
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+  },
+});
 
 module.exports = ItemModsListView;

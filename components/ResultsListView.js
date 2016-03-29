@@ -5,7 +5,7 @@ import React, {
   Text
 } from 'react-native'
 
-import styles from './Styles';
+import GlobalStyles from './Styles';
 import ResultItemView from './ResultItemView'
 
 /*
@@ -27,12 +27,11 @@ class ResultsListView extends Component {
     );
   }
 
-
   render() {
     if(this.props.results.hits.total < 1) {
       return(
-        <View style = {{justifyContent: 'center', padding: 10}}>
-          <Text style = {styles.text}>
+        <View style = {styles.noResultsContainer}>
+          <Text style = {GlobalStyles.text}>
             Sorry, your query returned no results. Names must be an exact match.
           </Text>
         </View>
@@ -47,5 +46,12 @@ class ResultsListView extends Component {
     }
   }
 }
+
+const styles = React.StyleSheet.create({
+  noResultsContainer: {
+    justifyContent: 'center',
+    padding: 10
+  }
+});
 
 module.exports = ResultsListView;

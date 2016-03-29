@@ -5,7 +5,7 @@ import React, {
   Text
 } from 'react-native'
 
-import styles from './Styles';
+import GlobalStyles from './GlobalStyles';
 import ResultItemInfoView from './ResultItemInfoView'
 
 /*
@@ -25,7 +25,7 @@ class ResultItemView extends Component {
             <Text style = {styles.uniqueNameText}>
               {this.props.data._source.info.fullName}
             </Text>
-            <Text style = {styles.modText}>
+            <Text style = {GlobalStyles.modText}>
               Seller: {this.props.data._source.shop.lastCharacterName}
             </Text>
           </View>
@@ -35,7 +35,7 @@ class ResultItemView extends Component {
             style = {{width: 64, height: 64}}
             />
             <View style = {{paddingLeft: 10}}>
-              <Text style = {styles.modText}>
+              <Text style = {GlobalStyles.modText}>
                 {this.props.data._source.shop.note || 'No Price Set'}{'\n'}
                 Verified: {this.props.data._source.shop.verified}{'\n'}
               </Text>
@@ -55,5 +55,38 @@ class ResultItemView extends Component {
     );
   }
 }
+
+const styles = React.StyleSheet.create({
+  resultItemTextContainer: {
+    flex: 1,
+    backgroundColor: '#000000',
+    width: 352,
+    padding: 10,
+  },
+  resultItemContainer: {
+    flexDirection: 'column',
+    flex: 1,
+    borderWidth: 1,
+    borderColor: '#000000',
+  },
+  uniqueNameText: {
+    fontFamily: 'Arial',
+    color: '#AF6025',
+    textAlign: 'left',
+  },
+  flavourText: {
+    fontFamily: 'Arial',
+    color: '#22B14C',
+    textAlign: 'left',
+    fontStyle: 'italic'
+  },
+  flavourTextContainer: {
+    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    flexWrap: 'wrap',
+    padding: 10
+  },
+});
 
 module.exports = ResultItemView;
