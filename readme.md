@@ -1,4 +1,4 @@
-#ExileTrade-React
+# ExileTrade-React
 <p align="center">
   <img src='http://i.imgur.com/dOWc36G.png'>
 </p>
